@@ -58,7 +58,7 @@ LEFT OUTER JOIN information_schema.columns AS col ON col.table_schema = nspname 
      col.column_name = attname
 WHERE
      atttypid <> 0 AND
-     relkind IN ('r', 'v', 'm') AND
+     relkind IN ('r', 'v', 'm', 'p') AND
      NOT attisdropped AND
      nspname NOT IN ('pg_catalog', 'information_schema') AND
      attnum > 0 AND
@@ -85,7 +85,7 @@ LEFT OUTER JOIN information_schema.columns AS col ON col.table_schema = nspname 
      col.column_name = attname
 WHERE
      atttypid <> 0 AND
-     relkind IN ('r', 'v', 'm') AND
+     relkind IN ('r', 'v', 'm', 'p') AND
      NOT attisdropped AND
      nspname NOT IN ('pg_catalog', 'information_schema') AND
      attnum > 0 AND
